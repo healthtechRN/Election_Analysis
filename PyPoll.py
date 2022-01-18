@@ -54,6 +54,7 @@ with open(file_to_load) as election_data:
             f"Total Votes: {total_votes:,}\n"
             f"-------------------------\n")
         print(election_results, end="")
+
         # Save the final vote count to the text file.
         txt_file.write(election_results)
 
@@ -64,9 +65,11 @@ with open(file_to_load) as election_data:
             votes = candidate_votes[candidate_name]
             # Calculate the percentage of votes.
             vote_percentage = float(votes) / float(total_votes) * 100
-            
-            # Print out each candidate's name, vote count, and percentage of # votes to the terminal.
-            #print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+            candidate_results = (f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+            # Print each candidate, their voter count, and percentage to the terminal.
+            print(candidate_results)
+            #  Save the candidate results to our text file.
+            txt_file.write(candidate_results)
 
             # Determine winning vote count and candidate
             # Determine if the votes is greater than the winning count.
@@ -84,7 +87,9 @@ with open(file_to_load) as election_data:
             f"Winning Vote Count: {winning_count:,}\n"
             f"Winning Percentage: {winning_percentage:.1f}%\n"
             f"-------------------------\n")
-        #print(winning_candidate_summary)
+        print(winning_candidate_summary)
+        # Save the winning candidate's results to the text file.
+        txt_file.write(winning_candidate_summary)
 
 # 1. The total number of votes cast
 # 2. A complete list of candidates who received votes
