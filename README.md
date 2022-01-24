@@ -129,9 +129,9 @@ with open(file_to_load) as election_data:
 ![Election Results CSV](Resources/Elections_Results_CSV.png)
 - If the CSV file is not in the following order
   - The CSV columns can be rearranged (most cumbersome)
-  - The candidate_name row index [2] can be modified dependening on which column the Candidate's name is
+  - The candidate_name row index [2] can be modified depending on which column the Candidate's name is in
   - The county_name row index [1] will also need to be modified if the county or region is not in the second column
-  - The variable name wherever county is listed can be substituted for state, city, if it is not identified as county.
+  - The variable name wherever county is listed can be substituted for state, city, if it is not identified as county
 ```Python
         # Get the candidate name from each row.
         candidate_name = row[2]
