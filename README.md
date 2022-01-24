@@ -19,6 +19,19 @@ A Colorado Board of Elections employee has given you the following task to compl
 - The analysis of the election show that:
   - There were "369,711" votes cast in the election.
 
+- County Votes
+  - Jefferson: 10.5% (38,855)
+  - Denver: 82.8% (306,055)
+  - Arapahoe: 6.7% (24,801)
+- Largest County Turnout: Denver
+
+- Candidate list
+  - Charles Casper Stockham: 23.0% (85,213)
+  - Diana DeGette: 73.8% (272,892)
+  - Raymon Anthony Doane: 3.1% (11,606)
+- The winner of the election was:
+    - Dianna DeGette, who received 73.8% of the vote and 272,892 number of votes.
+
 ### Example of code to get total vote count
 ```Python
 # Initialize a total vote counter.
@@ -42,13 +55,8 @@ with open(file_to_save, "w") as txt_file:
         f"County Votes:\n")
     print(election_results, end="")
 ```
-- County Votes:
-  - Jefferson: 10.5% (38,855)
-  - Denver: 82.8% (306,055)
-  - Arapahoe: 6.7% (24,801)
-- Largest County Turnout: Denver
 
-### Example of code to determine voter turnout, percentage of votes from each county and identify the county with the highest turnout
+### Example of code to determine county voter turnout, percentage of votes from each county and identify the county with the highest turnout
 ```Python
 # 1: Create a county list and county votes dictionary.
 county_list = []
@@ -111,15 +119,9 @@ with open(file_to_load) as election_data:
     # 8: Save the county with the largest turnout to a text file.
     txt_file.write(largest_county_summary)
 ```
-- Candidate list
-  - Charles Casper Stockham: 23.0% (85,213)
-  - Diana DeGette: 73.8% (272,892)
-  - Raymon Anthony Doane: 3.1% (11,606)
-- The winner of the election was:
-    - Dianna DeGette, who received 73.8% of the vote and 272,892 number of votes.
 
 ## Election-Audit Summary
-- This script can be used with some modifications for any election to get the total vote count, determine the voter turnout for each region, determine the percentage of votes from each region, identify the region with the highest turnout, get a complete list of candidates, calculate the total number of votes for each candidate, calculated the percentage of votes each candidate won, and determine the winner of the election based on popular vote.
+- This script can be used with some modifications for any election to get the total vote count, determine the voter turnout for each region, determine the percentage of votes from each region, identify the region with the highest turnout, get a complete list of candidates, calculate the total number of votes for each candidate, calculate the percentage of votes each candidate won, and determine the winner of the election based on popular vote.
 - The following .txt file will be written and the above criteria summarized when the script is ran
 ![Election Results Summary .txt](Resources/Election_Results_Summary.png)
 - The current script relies that the .csv file shows the following order: ballot ID, County/Region, and candidate.
