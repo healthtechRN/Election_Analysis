@@ -117,5 +117,5 @@ with open(file_to_load) as election_data:
 ## Election-Audit Summary
 In a summary statement, provide a business proposal to the election commission on how this script can be used—with some modifications—for any election. Give at least two examples of how this script can be modified to be used for other elections.
 ![Election Results Summary .txt](Resources/Election_Results_Summary.png)
-![Election Results CSV](Resources/Election_Results_CSV.png)
+![Election Results CSV](Resources/Elections_Results_CSV.png)
     
